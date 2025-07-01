@@ -108,7 +108,7 @@ const Gallery: React.FC = () => {
                         style={{ height: `${getImageHeight(project, index)}px` }}
                     >
                       <img
-                          src={project.mediaUrl}
+                          src={project.thumbnailUrl ?? project.mediaUrls?.[0] ?? ''}
                           alt={project.title}
                           className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                           loading="lazy"
@@ -205,7 +205,7 @@ const Gallery: React.FC = () => {
             >
               <div className="relative overflow-hidden bg-background mb-8">
                 <img
-                    src={project.mediaUrl}
+                    src={project.thumbnailUrl ?? project.mediaUrls?.[0] ?? ''}
                     alt={project.title}
                     className="w-full h-auto object-cover transition-all duration-1000 group-hover:scale-105"
                     loading="lazy"
@@ -256,7 +256,7 @@ const Gallery: React.FC = () => {
             >
               <div className="aspect-[4/5] overflow-hidden bg-background mb-8 relative">
                 <img
-                    src={project.mediaUrl}
+                    src={project.thumbnailUrl ?? project.mediaUrls?.[0] ?? ''}
                     alt={project.title}
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                     loading="lazy"

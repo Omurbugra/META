@@ -21,7 +21,7 @@ const assistants = [
   {
     name: "Deniz Ak",
     email: "ak.deniz@metu.edu.tr",
-    image: "/META/Teamimages/deniz.jpg"
+    image: "/META/Teamimages/deniz2.jpg"
   },
   {
     name: "Hazal Yüksekkaya",

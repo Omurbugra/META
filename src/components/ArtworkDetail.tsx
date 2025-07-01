@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Info, Calendar, Tag, ExternalLink } from 'lucide-react';
 import { Project } from '../data/projects';
+import ImageCarousel from './ImageCarousel';
 
 interface ArtworkDetailProps {
   project: Project;
@@ -55,27 +56,15 @@ const ArtworkDetail: React.FC<ArtworkDetailProps> = ({ project, projects, onClos
     switch (project.mediaType) {
       case 'image':
         return (
-          <div className="relative w-full">
-            <img
-              src={project.mediaUrl}
-              alt={project.title}
-              className={`w-full h-auto max-h-[70vh] object-contain transition-opacity duration-700 ${
-                imageLoaded ? 'opacity-100' : 'opacity-0'
-              }`}
-              onLoad={() => setImageLoaded(true)}
-            />
-            {!imageLoaded && (
-              <div className="absolute inset-0 flex items-center justify-center min-h-[400px]">
-                <div className="w-12 h-12 border-2 border-gray-300 border-t-gray-900 dark:border-gray-700 dark:border-t-gray-100 rounded-full animate-spin"></div>
-              </div>
-            )}
-          </div>
+            <div className="relative w-full">
+              <ImageCarousel images={project.mediaUrls} altText={project.title} />
+            </div>
         );
       case 'video':
         return (
           <div className="w-full">
             <iframe
-              src={project.mediaUrl}
+              src={project.mediaUrls}
               title={project.title}
               className="w-full h-[70vh] max-w-5xl mx-auto"
               frameBorder="0"

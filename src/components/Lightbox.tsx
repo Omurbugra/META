@@ -111,7 +111,7 @@ const Lightbox: React.FC<LightboxProps> = ({ project, projects, onClose, onNavig
             onMouseLeave={handleMouseUp}
           >
             <img
-              src={project.mediaUrl}
+              src={project.mediaUrls}
               alt={project.title}
               className={`max-w-none transition-all duration-700 ${
                 imageLoaded ? 'opacity-100' : 'opacity-0'
@@ -134,7 +134,7 @@ const Lightbox: React.FC<LightboxProps> = ({ project, projects, onClose, onNavig
       case 'video':
         return (
           <iframe
-            src={project.mediaUrl}
+            src={project.mediaUrls}
             title={project.title}
             className="w-full h-full max-w-6xl max-h-[80vh]"
             frameBorder="0"

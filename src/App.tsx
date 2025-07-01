@@ -20,7 +20,7 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter>
+          <BrowserRouter basename="/META">
             <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors">
               <Header />
               <main className="flex-1">
@@ -32,7 +32,7 @@ const App = () => (
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
-              <Footer /> {/* ✅ Footer en alta eklendi */}
+              <Footer />
             </div>
           </BrowserRouter>
         </TooltipProvider>

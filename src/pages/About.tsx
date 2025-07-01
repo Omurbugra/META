@@ -26,8 +26,8 @@ const About = () => {
         </div>
 
         <div className="prose prose-lg max-w-none animate-fade-up">
-          <div className="text-xl leading-relaxed space-y-8 text-gray-800">
-            <div>
+          <div className="text-xl leading-relaxed space-y-8 text-gray-800 dark:text-gray-300">
+          <div>
               <h2 className="text-2xl font-semibold mb-4">50 Years of METU Journal of Architecture</h2>
               <p>
                 To celebrate the 50th anniversary of the METU Journal of the Faculty of Architecture, 
@@ -64,7 +64,7 @@ const About = () => {
                 {highlights.map((highlight, index) => (
                   <div 
                     key={highlight}
-                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors animate-fade-up"
+                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors animate-fade-up"
                     style={{ animationDelay: `${index * 0.05}s` }}
                   >
                     <div className="w-2 h-2 bg-black rounded-full flex-shrink-0"></div>

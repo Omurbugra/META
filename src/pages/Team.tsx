@@ -1,27 +1,27 @@
 
 const curators = [
   {
-    name: "Pelin Yoncacı Arslan",
+    name: "Elif Kaymaz",
     email: "pelin@email.com",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b12a9926?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3"
+    image: "/META/Teamimages/elif.jpg"
   },
   {
-    name: "Elif Kaymaz", 
-    email: "elif@email.com",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3"
+    name: "Pelin Yoncacı Arslan",
+    email: "pyoncaci@metu.edu.tr",
+    image: "/META/Teamimages/pelin.png"
   },
   {
     name: "Özlem Ölçer",
-    email: "ozlem@email.com", 
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3"
+    email: "oolcer@proton.me",
+    image: "/META/Teamimages/ozlem.jpg"
   }
 ];
 
 const assistants = [
   {
     name: "Deniz Ak",
-    email: "deniz@email.com",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3"
+    email: "ak.deniz@metu.edu.tr",
+    image: "/META/Teamimages/deniz.jpg"
   },
   {
     name: "Hazal Yüksekkaya",
@@ -45,13 +45,13 @@ const assistants = [
   },
   {
     name: "Ömür Buğra Gündüz",
-    email: "omur@email.com", 
-    image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3"
+    email: "bugra.gunduz@metu.edu.tr",
+    image: "/META/Teamimages/omur.png"
   },
   {
     name: "Şule Çekmegeli",
-    email: "sule@email.com",
-    image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3"
+    email: "sulecekmegeli@gmail.com",
+    image: "/META/Teamimages/sule.jpg"
   },
   {
     name: "Ufuk Tanyeri",
@@ -114,23 +114,21 @@ const Team = () => {
         </div>
 
         {/* Acknowledgments */}
-        <div className="max-w-4xl mx-auto text-center animate-fade-up">
-          <div className="bg-gray-50 p-8 rounded-lg">
-            <h3 className="text-2xl font-semibold mb-6">Acknowledgments</h3>
-            <div className="text-gray-700 leading-relaxed space-y-4">
-              <p>
-                We extend special thanks to the METU JFA Editorial Board for inviting us and for 
-                opening the Journal's archives for our exploration.
-              </p>
-              <p>
-                We are extremely grateful to Selen Tuğrul, Fırat Öter, Berfin Güzel, Elif Nur İpek, 
-                Fatma İkbal Polat, Öykü Su Sezen, Eda Soyal, and Başak Ünver for their valuable contributions.
-              </p>
-              <p>
-                We also acknowledge the generous financial support provided by Adım ODTÜ, 
-                Mimarlar Derneği 1927, Koruma Uzmanları Derneği (KORDER), and METU Faculty of Architecture.
-              </p>
-            </div>
+        <div className="text-center animate-fade-up mt-12 px-6">
+          <h3 className="text-3xl font-semibold mb-4 text-gray-900 dark:text-gray-100">Acknowledgments</h3>
+          <div className="max-w-7xl mx-auto text-sm text-gray-600 dark:text-gray-400 font-light space-y-3 leading-normal">
+            <p>
+              We extend special thanks to the METU JFA Editorial Board for inviting us and for
+              opening the Journal's archives for our exploration.
+            </p>
+            <p>
+              We are extremely grateful to Selen Tuğrul, Fırat Öter, Berfin Güzel, Elif Nur İpek,
+              Fatma İkbal Polat, Öykü Su Sezen, Eda Soyal, and Başak Ünver for their valuable contributions.
+            </p>
+            <p>
+              We also acknowledge the generous financial support provided by Adım ODTÜ, Mimarlar Derneği 1927,
+              Koruma Uzmanları Derneği (KORDER), and METU Faculty of Architecture.
+            </p>
           </div>
         </div>
       </div>

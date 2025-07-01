@@ -7,35 +7,65 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%; /* beyaz */
+    --foreground: 0 0% 10%;  /* siyaha yakın */
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 240 100% 60%; /* canlı mavi */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 20% 90%;
+    --secondary-foreground: 240 30% 20%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 240 50% 95%;
+    --accent-foreground: 240 60% 30%;
+
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 0 0% 95%;
+    --ring: 240 100% 70%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 5%;
+    --card: 0 0% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 5%;
+    --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 0 0% 10%;
+    --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 15%;
+    --muted: 0 0% 20%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 0 0% 15%;
+    --accent: 0 0% 25%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
+    --border: 0 0% 30%;
+    --input: 0 0% 20%;
     --ring: 0 0% 100%;
-
-    --radius: 0.5rem;
   }
 
   * {
@@ -43,17 +73,28 @@
   }
 
   body {
-    @apply bg-background text-foreground font-futura;
+    @apply bg-background text-foreground font-futura transition-colors duration-300;
   }
 }
 
+
 /* Architectural Grid Background */
 .architectural-grid {
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 40px 40px;
 }
+
+:root .architectural-grid {
+  background-image:
+          linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+}
+
+.dark .architectural-grid {
+  background-image:
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
 
 /* Advanced Typography Animations */
 @keyframes letterReveal {
@@ -138,11 +179,14 @@
 }
 
 .typewriter {
+  display: inline-block;
+  width: 0; /* 🔥 Eklemezsen animasyon hatalı başlar */
   overflow: hidden;
-  border-right: 2px solid white;
+  border-right: 2px solid currentColor; /* eski "white" yerine dinamik renk */
   white-space: nowrap;
   animation: typewriter 3s steps(40, end) 1s forwards, blink-caret 0.75s step-end infinite 4s;
 }
+
 
 @keyframes blink-caret {
   from, to {
@@ -220,3 +264,5 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+

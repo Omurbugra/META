@@ -40,8 +40,8 @@ const assistants = [
   },
   {
     name: "Nuri Cem Kulaksız",
-    email: "cem@email.com",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3"
+    email: "nuricem.kulaksiz@outlook.com",
+    image: "/META/Teamimages/nuri.jpg"
   },
   {
     name: "Ömür Buğra Gündüz",

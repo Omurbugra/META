@@ -30,8 +30,8 @@ const assistants = [
   },
   {
     name: "İlkmen Verda Azkar",
-    email: "ilkman@email.com",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3"
+    email: "verda.azkar@metu.edu.tr",
+    image: "/META/Teamimages/verda.jpg"
   },
   {
     name: "İlkyaz Sarımehmetoğlu", 

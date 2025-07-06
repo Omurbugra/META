@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, ChevronLeft, ChevronRight, Info, Calendar, Tag, ExternalLink } from 'lucide-react';
 import { Project } from '../data/projects';
 import ImageCarousel from './ImageCarousel';
+import ImageCarouselZoomable from './ImageCarouselZoomable';
 
 interface ArtworkDetailProps {
   project: Project;
@@ -11,7 +12,7 @@ interface ArtworkDetailProps {
 }
 
 const ArtworkDetail: React.FC<ArtworkDetailProps> = ({ project, projects, onClose, onNavigate }) => {
-  const [showInfo, setShowInfo] = useState(false);
+  const [showInfo, setShowInfo] = useState(true);
   const [imageLoaded, setImageLoaded] = useState(false);
   
   const currentIndex = projects.findIndex(p => p.id === project.id);
@@ -49,17 +50,21 @@ const ArtworkDetail: React.FC<ArtworkDetailProps> = ({ project, projects, onClos
   // Reset state when project changes
   useEffect(() => {
     setImageLoaded(false);
-    setShowInfo(false);
+    setShowInfo(true);
   }, [project.id]);
 
   const renderMedia = () => {
     switch (project.mediaType) {
-      case 'image':
+      case 'image': {
+        const imageArray = Array.isArray(project.mediaUrls)
+            ? project.mediaUrls
+            : [project.mediaUrls];
+
         return (
-            <div className="relative w-full">
-              <ImageCarousel images={project.mediaUrls} altText={project.title} />
-            </div>
+            <ImageCarouselZoomable images={imageArray} altText={project.title} />
         );
+      }
+
       case 'video':
         return (
           <div className="w-full">

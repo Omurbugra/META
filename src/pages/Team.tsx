@@ -26,7 +26,7 @@ const assistants = [
   {
     name: "Hazal Yüksekkaya",
     email: "hazal@email.com",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3"
+    image: "/META/Teamimages/Hazal.png"
   },
   {
     name: "İlkmen Verda Azkar",
@@ -35,8 +35,8 @@ const assistants = [
   },
   {
     name: "İlkyaz Sarımehmetoğlu", 
-    email: "ilkyaz@email.com",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3"
+    email: "ilkyazsmo@gmail.com",
+    image: "/META/Teamimages/ilkyaz.png"
   },
   {
     name: "Nuri Cem Kulaksız",

@@ -486,7 +486,9 @@ const Gallery: React.FC = () => {
                 onNavigate={handleLightboxNavigate}
             />
         )}
+
       </div>
+
   );
 };
 

@@ -17,7 +17,8 @@ const Lightbox: React.FC<LightboxProps> = ({ project, projects, onClose, onNavig
   const [panPosition, setPanPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  
+
+
   const currentIndex = projects.findIndex(p => p.id === project.id);
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
@@ -210,7 +211,7 @@ const Lightbox: React.FC<LightboxProps> = ({ project, projects, onClose, onNavig
               <span className="font-light tracking-wide">Info</span>
             </button>
           </div>
-          
+
           <button
             onClick={onClose}
             className="w-12 h-12 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors duration-300"

@@ -18,6 +18,14 @@ const ArtworkDetail: React.FC<ArtworkDetailProps> = ({ project, projects, onClos
   const currentIndex = projects.findIndex(p => p.id === project.id);
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+  const [scrollHintVisible, setScrollHintVisible] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setScrollHintVisible(false), 3000);
+    return () => clearTimeout(timeout);
+  }, [project.id]);
+
+
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -315,6 +323,19 @@ const ArtworkDetail: React.FC<ArtworkDetailProps> = ({ project, projects, onClos
         <div>← → to navigate</div>
         <div>I to toggle info</div>
       </div>
+      <div
+          className={`fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 transition-opacity duration-1000 ease-in-out ${
+              scrollHintVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+      >
+        <div className="px-8 py-4 bg-white text-gray-900 text-lg font-semibold rounded-full shadow-xl backdrop-blur-md bg-opacity-90 border border-gray-300 dark:bg-gray-800 dark:text-white dark:border-gray-600">
+          ↓ Scroll down for full description
+        </div>
+      </div>
+
+
+
+
     </div>
   );
 };

@@ -25,7 +25,7 @@ const assistants = [
   },
   {
     name: "Hazal Yüksekkaya",
-    email: "hazal@email.com",
+    email: "hazalyuksekkaya98@gmail.com",
     image: "/META/Teamimages/Hazal.png"
   },
   {

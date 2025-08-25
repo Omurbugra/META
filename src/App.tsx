@@ -20,7 +20,7 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter basename="/META">
+          <BrowserRouter basename="/">
             <div className="min-h-screen flex flex-col bg-background text-foreground transition-colors">
               <Header />
               <main className="flex-1">

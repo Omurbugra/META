@@ -2,7 +2,7 @@
 const curators = [
   {
     name: "Elif Kaymaz",
-    email: "pelin@email.com",
+    email: "ekaymaz@metu.edu.tr",
     image: "/Teamimages/elif.jpg"
   },
   {

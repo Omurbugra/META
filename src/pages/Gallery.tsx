@@ -201,7 +201,7 @@ const Gallery: React.FC = () => {
                 key={project.id}
                 className="break-inside-avoid group cursor-pointer fade-in mb-12"
                 style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => handleProjectClick(project)}
+                onClick={() => handleProjectClick(project, true)}
             >
               <div className="relative overflow-hidden bg-background mb-8">
                 <img
@@ -252,7 +252,7 @@ const Gallery: React.FC = () => {
                 key={project.id}
                 className="group cursor-pointer fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => handleProjectClick(project)}
+                onClick={() => handleProjectClick(project, true)}
             >
               <div className="aspect-[4/5] overflow-hidden bg-background mb-8 relative">
                 <img

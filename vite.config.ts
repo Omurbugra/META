@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/META/', // ← bu satır düzeltildi
+  base: '/', // ← bu satır düzeltildi
   server: {
     host: "::",
     port: 8080,

@@ -3,17 +3,17 @@ const curators = [
   {
     name: "Elif Kaymaz",
     email: "pelin@email.com",
-    image: "/META/Teamimages/elif.jpg"
+    image: "/Teamimages/elif.jpg"
   },
   {
     name: "Pelin Yoncacı Arslan",
     email: "pyoncaci@metu.edu.tr",
-    image: "/META/Teamimages/pelin.png"
+    image: "/Teamimages/pelin.png"
   },
   {
     name: "Özlem Ölçer",
     email: "oolcer@proton.me",
-    image: "/META/Teamimages/ozlem.jpg"
+    image: "/Teamimages/ozlem.jpg"
   }
 ];
 
@@ -21,42 +21,42 @@ const assistants = [
   {
     name: "Deniz Ak",
     email: "ak.deniz@metu.edu.tr",
-    image: "/META/Teamimages/deniz2.jpg"
+    image: "/Teamimages/deniz2.jpg"
   },
   {
     name: "Hazal Yüksekkaya",
     email: "hazalyuksekkaya98@gmail.com",
-    image: "/META/Teamimages/Hazal.png"
+    image: "/Teamimages/Hazal.png"
   },
   {
     name: "İlkmen Verda Azkar",
     email: "verda.azkar@metu.edu.tr",
-    image: "/META/Teamimages/verda.jpg"
+    image: "/Teamimages/verda.jpg"
   },
   {
     name: "İlkyaz Sarımehmetoğlu", 
     email: "ilkyazsmo@gmail.com",
-    image: "/META/Teamimages/ilkyaz.png"
+    image: "/Teamimages/ilkyaz.png"
   },
   {
     name: "Nuri Cem Kulaksız",
     email: "nuricem.kulaksiz@outlook.com",
-    image: "/META/Teamimages/nuri.jpg"
+    image: "/Teamimages/nuri.jpg"
   },
   {
     name: "Ömür Buğra Gündüz",
     email: "bugra.gunduz@metu.edu.tr",
-    image: "/META/Teamimages/omur.png"
+    image: "/Teamimages/omur.png"
   },
   {
     name: "Şule Çekmegeli",
     email: "sulecekmegeli@gmail.com",
-    image: "/META/Teamimages/sule.jpg"
+    image: "/Teamimages/sule.jpg"
   },
   {
     name: "Ufuk Tanyeri",
-    email: "ufuk@email.com",
-    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3"
+    email: "ufktanyeri@gmail.com",
+    image: "/Teamimages/ufuk.jpg"
   }
 ];
 

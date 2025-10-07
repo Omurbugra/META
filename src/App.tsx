@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./components/Header";
 import Footer from "./components/Footer"; // ✅ Footer bileşeni eklendi
 import Index from "./pages/Index";
@@ -29,7 +29,7 @@ const App = () => (
                   <Route path="/gallery" element={<Gallery />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/team" element={<Team />} />
-                  <Route path="*" element={<NotFound />} />
+                  <Route path="*" element={<Navigate to="/" replace />} />
                 </Routes>
               </main>
               <Footer />
